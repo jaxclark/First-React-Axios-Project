@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(160, 117, 177);
+  height: 15vh;
+}
+
+.nav > a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(185, 185, 185);
+  height: 15vh;
+}
+
+.home {
+  height: 70vh;
+}
+
+.sortingHat {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.Ravenclaw {
+  height: 70vh;
+  background-color: rgb(69, 24, 230);
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(165, 67, 42);
+}
+
+.Slytherin {
+  height: 70vh;
+  background-color: rgb(7, 117, 7);
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(199, 199, 199);
+}
+
+.Gryffindor {
+  height: 70vh;
+  background-color: rgb(207, 22, 8);
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 208, 0);
+}
+
+.Hufflepuff {
+  height: 70vh;
+  background-color: rgb(255, 238, 0);
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+/* .search {
+  height: 70vh;
+} */
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.character {
+  height: 70vh;
+}
+
+.spellsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.singleSpell {
+  height: 70vh;
+}
