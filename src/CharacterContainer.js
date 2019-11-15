@@ -10,7 +10,7 @@ class CharacterContainer extends Component {
     render(){
         const mappedInfo = this.props.characters.map((data) => <Characters name={data.name} id={data._id} key={data._id} />)
         return(
-            <div className='infoContainer'>
+            <div className='charContainer'>
                 {mappedInfo}
             </div>
         )

@@ -2,18 +2,54 @@ body {
   margin: 0;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(160, 117, 177);
-  height: 15vh;
+.app {
+  display: grid;
+  grid-template-columns: 10vw auto;
+  grid-template-rows: 100fr;
 }
 
-.nav > a {
+.menuOff {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  background-color: rgb(160, 117, 177);
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+}
+
+.menuOn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(160, 117, 177);
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+}
+
+.menuOff > img {
+  position: relative;
+  top: 20px;
+  height: 30px;
+  widows: 40px;
+}
+.menuOn > img {
+  position: relative;
+  top: 20px;
+  transform: rotate(90deg);
+  height: 30px;
+  widows: 40px;
+}
+
+.menuOn > a {
   text-decoration: none;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .footer {
@@ -21,15 +57,17 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(185, 185, 185);
-  height: 15vh;
+  /* height: 15vh; */
+  grid-column: 1/-1;
+  grid-row: 2/3;
 }
 
 .home {
-  height: 70vh;
+  height: 100%;
 }
 
 .sortingHat {
-  height: 70vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,57 +75,74 @@ body {
 }
 
 .Ravenclaw {
-  height: 70vh;
   background-color: rgb(69, 24, 230);
-  font-size: 40px;
-  display: flex;
+  font-size: 20px;
+  display: grid;
   justify-content: center;
   align-items: center;
   color: rgb(165, 67, 42);
 }
 
+.Ravenclaw > img {
+  height: 300px;
+  width: auto;
+}
+
 .Slytherin {
-  height: 70vh;
   background-color: rgb(7, 117, 7);
-  font-size: 40px;
-  display: flex;
+  font-size: 20px;
+  display: grid;
   justify-content: center;
   align-items: center;
   color: rgb(199, 199, 199);
 }
 
+.Slytherin > img {
+  height: 300px;
+  width: auto;
+}
+
 .Gryffindor {
-  height: 70vh;
   background-color: rgb(207, 22, 8);
-  font-size: 40px;
-  display: flex;
+  font-size: 20px;
+  display: grid;
   justify-content: center;
   align-items: center;
   color: rgb(255, 208, 0);
 }
 
+.Gryffindor > img {
+  height: 300px;
+  width: auto;
+}
+
 .Hufflepuff {
-  height: 70vh;
+
   background-color: rgb(255, 238, 0);
-  font-size: 40px;
-  display: flex;
+  font-size: 20px;
+  display: grid;
   justify-content: center;
   align-items: center;
   color: black;
 }
 
-/* .search {
-  height: 70vh;
-} */
+.Hufflepuff > img {
+  height: 300px;
+  width: auto;
+}
 
-.infoContainer {
+.search {
+  height: 100%;
+}
+
+.charContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 
 .character {
-  height: 70vh;
+  height: 100%;
 }
 
 .spellsList {
@@ -96,5 +151,5 @@ body {
 }
 
 .singleSpell {
-  height: 70vh;
+  height: 100%;
 }

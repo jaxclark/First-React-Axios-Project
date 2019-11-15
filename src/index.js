@@ -5,4 +5,4 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom'
 import MyProvider from './MyProvider'
 
-ReactDOM.render(<MyProvider><BrowserRouter><App /></BrowserRouter></MyProvider>, document.getElementById('root'))
+ReactDOM.render(<BrowserRouter><MyProvider><App /></MyProvider></BrowserRouter>, document.getElementById('root'))
