@@ -7,7 +7,7 @@ class Navbar extends Component {
     constructor(){
         super()
         this.state = {
-            toggle: false
+            toggle: true
         }
     }
 
@@ -23,11 +23,12 @@ class Navbar extends Component {
                 { this.state.toggle ?
                     <div className='menuOn'>
                         <img onClick={this.handleToggle} src="http://cdn.onlinewebfonts.com/svg/img_146644.png" alt='menu button' />
-                        <Link to='/home'>Home</Link>
-                        <Link to='/sortinghat'>Sorting Hat</Link>
-                        <Link to='/search'>Search</Link>
+                        <Link to='/'>Home</Link>
+                        <Link to='/sorted'>House</Link>
                         <Link to='/characters'>Characters</Link>
                         <Link to='/spells'>Spells</Link>
+                        <Link to='/search'>Search</Link>
+                        <Link to='/practice'>Practice</Link>
                         <br/>
                     </div>
                     :

@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import Spells from './Spells'
+import Particles from 'react-particles-js'
+import all from './spells-particles.json'
 import {withProvider} from './MyProvider'
+
+const particlesVar = all
 
 class SpellsList extends Component {
     componentDidMount(){
@@ -12,6 +16,9 @@ class SpellsList extends Component {
         return(
             <div className='spellsList'>
                 {mappedSpells}
+                <div id='particles'>
+                    <Particles params={particlesVar} />
+                </div>
             </div>
         )
     }

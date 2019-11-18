@@ -56,8 +56,8 @@ export default class MyProvider extends Component {
     }
 
     setHouse = () => {
-        const newArr = this.state.houses.filter(array => array.name === this.state.houseName)
-        this.setState({house: newArr})
+        // const newArr = this.state.houses.filter(array => array.name === this.state.houseName)
+        this.setState(({houses, houseName}) => ({house: houses.filter(array => array.name === houseName)}))
     }
 
     filterSearch = (searchVal, searchType) => {
@@ -79,6 +79,10 @@ export default class MyProvider extends Component {
         this.setState({name})
     }
 
+    clearResults = () => {
+        this.setState({results: []})
+    }
+
     render(){
         return(
             <Provider value={{...this.state, 
@@ -92,7 +96,8 @@ export default class MyProvider extends Component {
                             filterSearch: this.filterSearch, 
                             handleName: this.handleName, 
                             getHouses: this.getHouses, 
-                            setHouse: this.setHouse}}>
+                            setHouse: this.setHouse,
+                            clearResults: this.clearResults}}>
                 {this.props.children}
             </Provider>
         )

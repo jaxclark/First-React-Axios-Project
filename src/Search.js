@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
-import {withProvider} from './MyProvider'
 import {Link} from 'react-router-dom'
-// import AllInfoContainer from './AllInfoContainer'
+import Particles from 'react-particles-js'
+import all from './search-particles.json'
+import {withProvider} from './MyProvider'
+
+const particlesVar = all
 
 class Search extends Component {
     constructor(){
@@ -20,6 +23,9 @@ class Search extends Component {
     
     handleChange = (e) => {
         this.setState({[e.target.name]: e.target.value})
+        if(e.target.name === 'searchType'){
+            this.props.clearResults()
+        }
     }
 
     handleSubmit = (e, thing) => {
@@ -28,7 +34,6 @@ class Search extends Component {
     }
 
     render() {
-        console.log(this.props.results)
         return(
             <div className='search'>
                 <form onSubmit={(e) => this.handleSubmit(e, this.state.search)}>
@@ -40,16 +45,16 @@ class Search extends Component {
                     <input onChange={this.handleChange} name='search' type="text"/>
                     <button>Search</button>
                 </form>
-                <div>results go here: 
+                <div className='results'>
                     {this.state.searchType === 'character' ?
                         this.props.results.map(result => <Link to={'/character/' + result._id}>{result.name}</Link>)
                     :
                         this.props.results.map(result => <Link to={'/spells/' + result._id}>{result.spell}</Link>)
                     }
                 </div>
-                {/* <div>
-                    <AllInfoContainer />
-                </div> */}
+                <div id='particles'>
+                    <Particles params={particlesVar} />
+                </div>
             </div>
         )
     }

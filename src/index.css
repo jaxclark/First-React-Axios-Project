@@ -2,68 +2,159 @@ body {
   margin: 0;
 }
 
-.app {
-  display: grid;
-  grid-template-columns: 10vw auto;
-  grid-template-rows: 100fr;
+@font-face {
+  font-family: 'HarryPotterFont';
+  src: local('HarryPotterFont'), url(./fonts/HarryPotterFont.TTF) format('truetype');
+
 }
 
-.menuOff {
-  display: flex;
-  justify-content: center;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  background-color: rgb(160, 117, 177);
-  grid-column: 1/2;
-  grid-row: 1/2;
-  height: 100%;
+.nav {
+  position: fixed;
+  top: 0;
   width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
 }
 
 .menuOn {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(160, 117, 177);
-  grid-column: 1/2;
   grid-row: 1/2;
-  height: 100%;
+  grid-column: 1/-1;
+  height: 30px;
   width: 100%;
+  display: flex;
+  align-self: center;
+  font-family: 'HarryPotterFont';
 }
 
 .menuOff > img {
-  position: relative;
-  top: 20px;
-  height: 30px;
-  widows: 40px;
+  visibility: hidden;
+  width: 0px;
+  margin: 0px 0px 5px 0px;
+  filter: invert(100%);
 }
+
 .menuOn > img {
-  position: relative;
-  top: 20px;
-  transform: rotate(90deg);
-  height: 30px;
-  widows: 40px;
+  visibility: visible;
+  width: 0px;
+  margin: 0px 0px 10px 0px;
+  filter: invert(100%);
 }
 
 .menuOn > a {
+  margin: 5px 3px 5px 3px;
   text-decoration: none;
-  color: black;
-  font-size: 18px;
+  color: white;
+  font-size: 22px;
 }
 
-.footer {
+.menuOn > a:hover {
+  color: rgba(255, 255, 255, 0.692);
+  font-size: 26px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(185, 185, 185);
-  /* height: 15vh; */
-  grid-column: 1/-1;
-  grid-row: 2/3;
+  align-self: center;
+}
+
+.menuOn > a:active {
+  color: black;
 }
 
 .home {
   height: 100%;
+
+}
+
+h1 {
+  margin: 0;
+}
+
+.audio {
+  display: flex;
+  background-image: url('https://cdn.hipwallpaper.com/i/91/53/5khRB7.jpg');
+  background-size: 200px 200px;
+  width: 100%;
+}
+
+audio {
+  width: 100%;
+}
+
+.home img {
+  height: 100px;
+  width: 90px;
+}
+
+.homeImageOne {
+  height: 75vh;
+  width: auto;
+  background-image: url('https://cdn.wallpapersafari.com/76/13/eNCcWV.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome {
+  background-image: url('https://cdn.hipwallpaper.com/i/91/53/5khRB7.jpg');
+  background-size: 200px 200px;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(10, 10, 10, 0.849);
+  font-size: 14px;
+}
+
+.homeImageTwo {
+  height: 75vh;
+  background-image: url('https://i0.wp.com/hermionessecretlibrary.com/wp-content/uploads/2017/10/Hogwarts_PM_B4C37M1_GreatHallMourningCedricsDeath_Moment.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+.approachHat {
+  background-image: url('https://cdn.hipwallpaper.com/i/91/53/5khRB7.jpg');
+  background-size: 200px 200px;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(10, 10, 10, 0.849);
+  font-size: 14px;
+}
+
+.homeImageThree {
+  height: 75vh;
+  background-image: url('https://images.ctfassets.net/usf1vwtuqyxm/2sLwPSOVqoOyCkEgSk0Oek/2a8885b787d86f7bed89e84cf2aa28d5/MinervaMcGonagall_PM_B1C7M2_HarryPotterBeingSortedInGreatHall_Moment.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+.sortMe {
+  background-image: url('https://cdn.hipwallpaper.com/i/91/53/5khRB7.jpg');
+  background-size: 200px 200px;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sortMe a {
+  text-decoration: none;
+  font-size: 54px;
+  color: rgba(10, 10, 10, 0.849);
+  font-weight: 600;
 }
 
 .sortingHat {
@@ -74,82 +165,642 @@ body {
   font-size: 40px;
 }
 
+.houseContainerR {
+  background-color: rgba(0, 74, 144, 0.438);
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0px 0px 340px 0px;
+}
+
+.houseContainerS {
+  background-color: rgba(6, 97, 16, 0.411);
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0px 0px 340px 0px;
+  z-index: -9;
+}
+
+.houseContainerG {
+  background-color: rgba(153, 48, 0, 0.37);
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0px 0px 340px 0px;
+}
+
+.houseContainerH {
+  background-color: rgba(238, 216, 23, 0.733);
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0px 0px 340px 0px;
+}
+
 .Ravenclaw {
-  background-color: rgb(69, 24, 230);
-  font-size: 20px;
+  height: 100%;
   display: grid;
-  justify-content: center;
-  align-items: center;
-  color: rgb(165, 67, 42);
-}
-
-.Ravenclaw > img {
-  height: 300px;
-  width: auto;
-}
-
-.Slytherin {
-  background-color: rgb(7, 117, 7);
-  font-size: 20px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  color: rgb(199, 199, 199);
-}
-
-.Slytherin > img {
-  height: 300px;
-  width: auto;
-}
-
-.Gryffindor {
-  background-color: rgb(207, 22, 8);
-  font-size: 20px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 208, 0);
-}
-
-.Gryffindor > img {
-  height: 300px;
-  width: auto;
-}
-
-.Hufflepuff {
-
-  background-color: rgb(255, 238, 0);
-  font-size: 20px;
-  display: grid;
+  grid-template-columns: 10vw 4fr;
+  grid-template-rows: auto;
   justify-content: center;
   align-items: center;
   color: black;
 }
 
-.Hufflepuff > img {
-  height: 300px;
+.Slytherin {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10vw 4fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  z-index: -8;
+}
+
+.Gryffindor {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10vw 4fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.Hufflepuff {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10vw 4fr;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.houseInfo {
+  height: auto;
+  width: 260px;
+  grid-column: 1/-1;
+  grid-row: 2/4;
+  font-size: 14px;
+  justify-self: center;
+  background-color: rgba(255, 255, 255, 0.644);
+  padding: 5px 15px 0px 15px;
+  border: 3px solid rgba(0, 0, 0, 0.74);
+  border-radius: 6px;
+}
+
+.houseImage {
+  justify-self: center;
+  height: 100%;
   width: auto;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  margin: 0px 30px 10px 30px;
+}
+
+.houseImage > img {
+  height: auto;
+  width: 100%;
 }
 
 .search {
   height: 100%;
+  min-height: 600px;
+  text-align: center;
+  padding: 20px 0px 0px 0px;
+  background-color: rgba(206, 0, 79, 0.548);
+  padding: 40px 0px 0px 0px;
+}
+
+select {
+  height: 20px;
+  font-size: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+  background-color: rgb(224, 224, 224);
+}
+
+.search input {
+  height: 20px;
+  font-size: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.search button {
+  height: 20px;
+  font-size: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+  background-color: rgb(224, 224, 224);
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin: 20px 20px 0px 20px;
+  padding: 0px 0px 20px 0px;
+}
+
+
+.results > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  padding: 4px 0px 4px 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.results > a:hover {
+  color: rgba(54, 54, 54, 0.692);
 }
 
 .charContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-color: rgba(125, 100, 184, 0.527);
+  padding: 20px 20px 20px 20px;
+  padding: 40px 20px 20px 20px;
 }
 
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0px 4px 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+}
+
+.info > a {
+  text-decoration: none;
+  color: black;
+  font-size: 11px;
+}
+
+.info > a:hover {
+  color: rgba(54, 54, 54, 0.692);
+}
 
 .character {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(125, 100, 184, 0.527);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.characterDiv {
+  padding: 0px 14px 4px 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+  font-size: 24px;
 }
 
 .spellsList {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-color: rgba(0, 151, 131, 0.432);
+  padding: 40px 20px 20px 20px;
+}
+
+.spells {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0px 4px 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+}
+
+.spells > a {
+  text-decoration: none;
+  color: black;
+  font-size: 11px;
+}
+
+.spells > a:hover {
+  color: rgba(54, 54, 54, 0.692);
 }
 
 .singleSpell {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 151, 131, 0.432);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleSpellDiv {
+  padding: 0px 14px 4px 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.685);
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.practice {
+  height: 100vh;
+  width: 100%;
+  /* position: relative; */
+  background-color: rgb(47, 55, 56);
+  /* z-index: 10; */
+  cursor: url('https://cdn.discordapp.com/attachments/632280517013930044/646024960162136114/patronus2.png') 45 45, auto;
+}
+
+.practice:active {
+  cursor: url('https://cdn.discordapp.com/attachments/632280517013930044/646030878975328286/patronus2Bigger.png') 62 62, auto;
+}
+
+.practiceHeader {
+  background-color: rgb(47, 55, 56);
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.815);
+}
+
+#practiceParticles canvas{
+  position: fixed;
+  top: 0;
+  left: 155px;
+  width: 100%;
   height: 100%;
+  z-index: 0;
+}
+
+#particles canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 361px) {
+  .menuOn > a {
+    margin: 5px 5px 5px 5px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  .menuOn > a:hover {
+    font-size: 39px;
+  }
+
+  .search {
+    min-height: 780px;
+  }
+
+}
+
+@media screen and (min-width: 412px) {
+  .menuOn > a {
+    margin: 5px 7px 5px 7px;
+    text-decoration: none;
+    font-size: 28px;
+  }
+
+  .menuOn > a:hover {
+    font-size: 34px;
+  }
+
+}
+
+@media screen and (min-width: 760px) {
+
+  .menuOn {
+    height: 40px;
+  }
+
+  .menuOn > a {
+    margin: 5px 20px 5px 20px;
+    font-size: 38px;
+  }
+
+  .menuOn > a:hover {
+    font-size: 44px;
+  }
+
+  .search {
+    font-size: 22px;
+    min-height: 1320px;
+    padding: 50px 0px 0px 0px;
+  }
+
+  .search input {
+    height: 26px;
+    font-size: 16px;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .results > a {
+    font-size: 18px;
+  }
+  
+  .charContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px 20px 20px 20px;
+  }
+  
+  .info > a {
+    font-size: 18px;
+  }
+
+  .spellsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px 20px 20px 20px;
+  }
+  
+  .spells > a {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  .menuOn {
+    height: 46px;
+  }
+
+  .menuOn > a {
+    margin: 5px 30px 5px 30px;
+    text-decoration: none;
+    font-size: 44px;
+  }
+
+  .menuOn > a:hover {
+    font-size: 50px;
+  }
+
+  .houseContainerR {
+    padding: 0px 0px 660px 0px;
+  }
+  
+  .houseContainerS {
+    padding: 0px 0px 660px 0px;
+  }
+  
+  .houseContainerG {
+    padding: 0px 0px 660px 0px;
+  }
+  
+  .houseContainerH {
+    padding: 0px 0px 660px 0px;
+  }
+  
+  .houseImage > img {
+    height: auto;
+    width: 100%;
+  }
+
+  .search {
+    font-size: 28px;
+  }
+
+  .search input {
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .results > a {
+    font-size: 18px;
+  }
+  
+  .charContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .info > a {
+    font-size: 18px;
+  }
+
+  .spellsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .spells > a {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+  .welcome {
+    font-size: 24px;
+  }
+  
+  .approachHat {
+    font-size: 24px;
+  }
+
+
+  .menuOff {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 300px;
+    width: 10%;
+    margin: 5px 0px 0px 20px;
+  }
+  
+  .menuOn {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 400px;
+    width: 100px;
+    margin: 5px 0px 0px 20px;
+  }
+  
+  .menuOff > img {
+    visibility: visible;
+    position: relative;
+    top: 20px;
+    left: 5px;
+    height: 30px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .menuOn > img {
+    visibility: visible;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    transform: rotate(90deg);
+    height: 30px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .menuOn > a {
+    margin: 5px 40px 5px 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+  }
+
+  .menuOn > a:hover {
+    font-size: 46px;
+  }
+
+  .houseContainerR {
+    padding: 0px 0px 300px 0px;
+  }
+  
+  .houseContainerS {
+    padding: 0px 0px 300px 0px;
+  }
+  
+  .houseContainerG {
+    padding: 0px 0px 300px 0px;
+  }
+  
+  .houseContainerH {
+    padding: 0px 0px 300px 0px;
+  }
+
+  .houseInfo {
+    width: 340px;
+    grid-column: 2/-1;
+    grid-row: 2/4;
+    font-size: 18px;
+  }
+  
+  .houseImage {
+    height: auto;
+    width: 60%;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    margin: 0px 30px 0px 30px;
+  }
+
+  .search {
+    font-size: 20px;
+    min-height: 1320px;
+    padding: 30px 0px 0px 0px;
+  }
+
+  select {
+    height: 30px;
+    font-size: 22px;
+  }
+  
+  .search input {
+    height: 30px;
+    font-size: 22px;
+  }
+  
+  .search button {
+    height: 30px;
+    font-size: 22px;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 20px 20px 160px;
+  }
+
+  .charContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 20px 20px 160px;
+  }
+
+  .spellsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 20px 20px 160px;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+
+  .menuOn {
+    margin: 30px 0px 0px 20px;
+  }
+
+  .menuOff > img {
+    top: 40px;
+    left: -17px;
+    height: 40px;
+  }
+  .menuOn > img {
+    top: 20px;
+    height: 40px;
+  }
+
+  .menuOn > a {
+    font-size: 45px;
+  }
+
+  .menuOn > a:hover {
+    font-size: 51px;
+  }
+
+  .houseContainerR {
+    padding: 0px 0px 200px 0px;
+  }
+  
+  .houseContainerS {
+    padding: 0px 0px 200px 0px;
+  }
+  
+  .houseContainerG {
+    padding: 0px 0px 200px 0px;
+  }
+  
+  .houseContainerH {
+    padding: 0px 0px 200px 0px;
+  }
+
+  .houseInfo {
+    width: 370px;
+    grid-column: 2/-1;
+    grid-row: 2/4;
+    font-size: 20px;
+  }
+
 }

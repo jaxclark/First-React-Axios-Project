@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import Characters from './Characters'
+import Particles from 'react-particles-js'
+import all from './characters-particles.json'
 import {withProvider} from './MyProvider'
+
+const particlesVar = all
 
 class CharacterContainer extends Component {
     componentDidMount(){
@@ -12,6 +16,9 @@ class CharacterContainer extends Component {
         return(
             <div className='charContainer'>
                 {mappedInfo}
+                <div id='particles'>
+                <Particles params={particlesVar} />
+                </div>
             </div>
         )
     }
