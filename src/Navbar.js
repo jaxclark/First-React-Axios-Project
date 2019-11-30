@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {withProvider} from './MyProvider'
+import song from './Harry_Potter_Theme_Song_Hedwigs_Theme.mp3'
 
 
 class Navbar extends Component {
@@ -9,6 +10,11 @@ class Navbar extends Component {
         this.state = {
             toggle: true
         }
+    }
+
+    componentDidMount(){
+        const hpTheme = new Audio(song)
+        hpTheme.play()
     }
 
     handleToggle = () => {

@@ -37,12 +37,12 @@ class Search extends Component {
         return(
             <div className='search'>
                 <form onSubmit={(e) => this.handleSubmit(e, this.state.search)}>
-                    <select onChange={this.handleChange} name="searchType" >
+                    <select onChange={this.handleChange} name='searchType' >
                         <option>Select Option</option>
                         <option value='character' >Characters</option>
-                        <option value="spells">Spells</option>
+                        <option value='spells'>Spells</option>
                         </select>
-                    <input onChange={this.handleChange} name='search' type="text"/>
+                    <input onChange={this.handleChange} name='search' type='text'/>
                     <button>Search</button>
                 </form>
                 <div className='results'>

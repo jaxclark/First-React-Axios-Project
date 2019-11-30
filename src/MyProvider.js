@@ -22,6 +22,8 @@ export default class MyProvider extends Component {
     getAllCharacters = () => {
         Axios.get('https://www.potterapi.com/v1/characters?key=$2a$10$c2vTQHg6Tk4fJU1DC95pkOsu2ilb4Vh9bunviNOxiFLEAp1zI/35K').then(res => {
             this.setState({characters: res.data})
+        }).catch(err => {
+            console.log(err)
         })
     }
 

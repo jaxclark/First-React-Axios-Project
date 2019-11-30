@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom'
 
 class Home extends Component {
     componentDidMount(){
-        const hpTheme = new Audio(song)
-        hpTheme.play()
+        // const hpTheme = new Audio(song)
+        // hpTheme.play()
         !this.props.houseName ? this.props.getSortingHat() : console.log('already sorted')
         this.props.getHouses()
     }

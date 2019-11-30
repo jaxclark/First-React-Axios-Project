@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a713d501.chunk.css",
+    "main.js": "/static/js/main.3cd30ed8.chunk.js",
+    "main.js.map": "/static/js/main.3cd30ed8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.27e01fcf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.27e01fcf.js.map",
+    "static/js/2.5e119cf0.chunk.js": "/static/js/2.5e119cf0.chunk.js",
+    "static/js/2.5e119cf0.chunk.js.map": "/static/js/2.5e119cf0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.342207e33243717fce01018fb21552fd.js": "/precache-manifest.342207e33243717fce01018fb21552fd.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.a713d501.chunk.css.map": "/static/css/main.a713d501.chunk.css.map",
+    "static/media/index.css": "/static/media/HarryPotterFont.181ef9a7.TTF",
+    "static/media/Harry_Potter_Theme_Song_Hedwigs_Theme.mp3": "/static/media/Harry_Potter_Theme_Song_Hedwigs_Theme.f9311124.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.27e01fcf.js",
+    "static/js/2.5e119cf0.chunk.js",
+    "static/css/main.a713d501.chunk.css",
+    "static/js/main.3cd30ed8.chunk.js"
+  ]
+}
