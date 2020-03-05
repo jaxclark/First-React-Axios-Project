@@ -12,10 +12,10 @@ class Navbar extends Component {
         }
     }
 
-    componentDidMount(){
-        const hpTheme = new Audio(song)
-        hpTheme.play()
-    }
+    // componentDidMount(){
+    //     const hpTheme = new Audio(song)
+    //     hpTheme.play()
+    // }
 
     handleToggle = () => {
         this.setState(prev => {
